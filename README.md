@@ -14,4 +14,8 @@ The [dataset](https://www.kaggle.com/c/ieee-fraud-detection/discussion/101203) i
 anonymized and has a mix of categorical and continuous features, include 339 
 features engineered by Vesta. The dataset is thoroughly explored in 01_EDA.ipynb.  
 
+## Modelling approach 
+
+
+
 
