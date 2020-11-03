@@ -2,7 +2,15 @@ import pandas as pd
 
 from SKClassifier        import SKClassifier
 from fastai.tabular.all  import TabularPandas, Categorify, FillMissing
-from sklearn.naive_bayes import GaussianNB
+from sklearn.ensemble    import RandomForestClassifier
+
+#200 est
+#imp
+#ros
+
+class RFClassifier(SKClassifier):
+
+      def __init__ 
 
 if __name__=='__main__':
     
@@ -43,14 +51,9 @@ if __name__=='__main__':
 
     clf = SKClassifier(model, TRAIN, CAT, CONT, DEP_VAR, PROCS)
     
-    clf.process_df()
-    clf.fit()
+    TO = clf.process_df()
+    
+    clf.fit(TO)
     clf.predict_proba()
     clf.auroc()
     clf.save('models/GNB_model.pkl')
-    
-    
-    
-    
-    
-        
