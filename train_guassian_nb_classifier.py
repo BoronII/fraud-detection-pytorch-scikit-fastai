@@ -9,15 +9,15 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics     import roc_auc_score
 from pathlib             import Path
 
-class GNBClassifier: 
+class SKClassifier: 
 
-    def __init__(self, df, cat, cont, dep_var, procs): 
+    def __init__(self, model, df, cat, cont, dep_var, procs): 
         self.cat     = cat
         self.cont    = cont
         self.dep_var = dep_var
-        self.model   = GaussianNB()
         self.procs   = procs
         self.df      = df
+        self.model   = model
         
     def process_df(self):
         # Calculate time delta on which to split data into training and validation
@@ -68,7 +68,10 @@ class GNBClassifier:
 
 if __name__=='__main__':
     
-    TRAIN = pd.read_csv('data/train.csv', index_col=[0], low_memory=False)
+    TRAIN = pd.read_csv('data/train_s.csv', index_col=[0], low_memory=False)
+    
+    # Drop columns with V*** features
+    TRAIN = TRAIN.drop(list(TRAIN.filter(regex = 'V')), axis = 1)
 
     # Categorical features
     CAT = ['ProductCD', 'card1', 'card2', 'card3', 'card4', 'card5', 'card6', 
@@ -86,6 +89,7 @@ if __name__=='__main__':
             'D8', 'D9', 'D10', 'D11', 'D12', 'D13', 'D14', 'D15', 'id_01', 'id_02', 
             'id_03', 'id_04', 'id_05', 'id_06', 'id_07', 'id_08', 'id_09', 'id_10', 
             'id_11']
+    
     # Target feature
     DEP_VAR = 'isFraud'
 
@@ -97,7 +101,9 @@ if __name__=='__main__':
     # creates a new Boolean column that records whether data was missing.
     PROCS = [Categorify, FillMissing]
     
-    clf = GNBClassifier(TRAIN, CAT, CONT, DEP_VAR, PROCS)
+    model = GaussianNB()   
+
+    clf = SKClassifier(model, TRAIN, CAT, CONT, DEP_VAR, PROCS)
     
     TO = clf.process_df()
     
