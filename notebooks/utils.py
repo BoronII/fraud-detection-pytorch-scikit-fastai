@@ -1,18 +1,13 @@
-# Module containing custom functions for IEEE Fraud Detection project
+# Module containing functions for IEEE Fraud Detection project notebooks
 
 import pandas as pd
 import numpy as np
 import seaborn as sns
 
-from matplotlib import pyplot as plt
-from sklearn.metrics import roc_auc_score
-from sklearn.metrics import auc 
-from sklearn.metrics import confusion_matrix
-from sklearn.metrics import precision_recall_fscore_support
-from sklearn.metrics import precision_recall_curve
-from sklearn.metrics import roc_curve
-
-
+from matplotlib      import pyplot as plt
+from sklearn.metrics import (roc_auc_score, auc, confusion_matrix,
+                             precision_recall_fscore_support,
+                             precision_recall_curve, roc_curve)
 
 # 01_EDA (functions introduced in 01_EDA notebook)
 
