@@ -203,9 +203,9 @@ def plot_dist_ratio(df, col, lim=2000):
 
 #02_RF 
 
-def fit(m, xs, y, valid_xs, valid_y):
+def fit(m, xs, y, valid_xs, valid_y, **kwargs):
     # Fit model
-    m.fit(xs, y)
+    m.fit(xs, y, **kwargs)
     # Make predictions
     prob_train = m.predict_proba(xs)[:,1]
     pred_train = m.predict(xs)
