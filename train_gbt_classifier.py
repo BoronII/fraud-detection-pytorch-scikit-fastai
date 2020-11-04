@@ -5,12 +5,10 @@ from fastai.tabular.all   import TabularPandas, Categorify, FillMissing
 from sklearn.experimental import enable_hist_gradient_boosting 
 from sklearn.ensemble     import HistGradientBoostingClassifier
 from pathlib              import Path 
-
-#Imp                       (Will have to load the values in)
      
 if __name__=='__main__':
 
-    PATH = Path('/Users/baranserajelahi/Codes/fraud-detection-pytorch-scikit-fastai/data')
+    PATH = Path('/data')
     
     TRAIN = pd.read_csv('data/train_s.csv', index_col=[0], low_memory=False)
     
