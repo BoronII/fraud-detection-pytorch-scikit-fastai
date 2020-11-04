@@ -48,11 +48,13 @@ if __name__=='__main__':
                                            max_depth=25, max_iter=1000, 
                                            max_leaf_nodes=44, min_samples_leaf=8,  
                                            scoring='roc_auc', tol=1e-8)   
-
+    
     clf = SKClassifier(model, TRAIN, CAT, CONT, DEP_VAR, PROCS)
     
     clf.process_df()
-   
+    
+    # Get training and validation data frames with feature deemed important
+    # by feature importance experiments 
     xs, y             = (PATH/'xs_imp.pkl').load(),       clf.y
     valid_xs, valid_y = (PATH/'valid_xs_imp.pkl').load(), clf.valid_y
     
