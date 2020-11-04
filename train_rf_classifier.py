@@ -1,17 +1,31 @@
 import pandas as pd
 
-from SKClassifier        import SKClassifier
-from fastai.tabular.all  import TabularPandas, Categorify, FillMissing
-from sklearn.ensemble    import RandomForestClassifier
-
-#200 est
-#imp
-#ros
+from SKClassifier           import SKClassifier
+from fastai.tabular.all     import TabularPandas, Categorify, FillMissing
+from sklearn.ensemble       import RandomForestClassifier
+from imblearn.over_sampling import RandomOverSampler
 
 class RFClassifier(SKClassifier):
+      
+    def __init__(self, model, df, cat, cont, dep_var, procs):
+        super().__init__(model, df, cat, cont, dep_var, procs) 
+      
+    def feature_importances(self, df,  thresh, to_drop=None):
+        fi = pd.DataFrame({'cols': df.columns,'imp': self.model.feature_importances_}) \
+                          .sort_values('imp', ascending=False)
+          
+        to_keep           = fi[fi.imp>thresh].cols
+        self.xs_imp       = self.xs[to_keep]
+        self.valid_xs_imp = self.valid_xs[to_keep]
+        
+        if to_drop != None: 
+            self.xs_imp       = self.xs_imp.drop(to_drop, axis=1)
+            self.valid_xs_imp = self.valid_xs_imp.drop(to_drop, axis=1)
+          
+        print(f'n_features: {len(to_keep)}')
+        return self.xs_imp, self.valid_xs_imp
 
-      def __init__ 
-
+     
 if __name__=='__main__':
     
     TRAIN = pd.read_csv('data/train_s.csv', index_col=[0], low_memory=False)
@@ -47,13 +61,42 @@ if __name__=='__main__':
     # creates a new Boolean column that records whether data was missing.
     PROCS = [Categorify, FillMissing]
     
-    model = GaussianNB()   
+    model = RandomForestClassifier(n_jobs=-1, max_samples=2/3,
+                           oob_score=True, max_features='sqrt',
+                           n_estimators=1000, criterion='entropy',
+                           max_leaf_nodes=750, min_samples_split=30, min_samples_leaf=5)   
 
-    clf = SKClassifier(model, TRAIN, CAT, CONT, DEP_VAR, PROCS)
+    clf = RFClassifier(model, TRAIN, CAT, CONT, DEP_VAR, PROCS)
     
-    TO = clf.process_df()
+    clf.process_df()
+
+    xs, y             = clf.xs,       clf.y
+    valid_xs, valid_y = clf.valid_xs, clf.valid_y
     
-    clf.fit(TO)
-    clf.predict_proba()
-    clf.auroc()
-    clf.save('models/GNB_model.pkl')
+    clf.fit(xs, y)
+    
+    to_drop = ['TransactionID']    
+
+    xs_imp, valid_xs_imp = clf.feature_importances(xs, thresh=0.003, to_drop=to_drop)
+
+    ros = RandomOverSampler(random_state=42)
+    
+    xs_imp, y = ros.fit_resample(xs_imp, y)
+   
+    assert y.sum()==len(y)/2
+   
+    clf.fit(xs_imp, y)
+    
+    train_preds = clf.predict_proba(xs_imp)
+    valid_preds = clf.predict_proba(valid_xs_imp)
+    
+    train_auroc = clf.auroc(y, train_preds)
+    print(f'Train_AUROC: {train_auroc}')
+    
+    valid_auroc = clf.auroc(valid_y, valid_preds)
+    print(f'Valid_AUROC: {valid_auroc}')
+
+    clf.save('models/RF_model.pkl')
+    
+    
+   

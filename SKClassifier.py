@@ -39,24 +39,19 @@ class SKClassifier:
         return to
            
         
-    def fit(self):
+    def fit(self, xs, y):
         # Train Gaussian Naive Bayes' classifier
-        self.model.fit(self.xs, self.y)
+        self.model.fit(xs, y)
     
-    def predict_proba(self):
+    def predict_proba(self, xs):
         # Get predictions
-        self.prob_train = self.model.predict_proba(self.xs)[:,1]
-        self.prob_valid = self.model.predict_proba(self.valid_xs)[:,1]
-        return self.prob_train, self.prob_valid
+        self.prob = self.model.predict_proba(xs)[:,1]
+        return self.prob
         
-    def auroc(self):
+    def auroc(self, targ, pred):
         # Calculate auroc
-        train_auroc = roc_auc_score(self.y,       self.prob_train)
-        valid_auroc = roc_auc_score(self.valid_y, self.prob_valid)
-        
-        # Print auroc 
-        print(f'Train_AROC: {train_auroc}')
-        print(f'Valid_AROC: {valid_auroc}')
+        auroc = roc_auc_score(targ, pred)
+        return auroc 
         
     def save(self, path): 
         path = Path(path)

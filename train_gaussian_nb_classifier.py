@@ -44,9 +44,21 @@ if __name__=='__main__':
     clf = SKClassifier(model, TRAIN, CAT, CONT, DEP_VAR, PROCS)
     
     clf.process_df()
-    clf.fit()
-    clf.predict_proba()
-    clf.auroc()
+
+    xs, y             = clf.xs,       clf.y
+    valid_xs, valid_y = clf.valid_xs, clf.valid_y
+    
+    clf.fit(xs, y)
+    
+    train_preds = clf.predict_proba(xs)
+    valid_preds = clf.predict_proba(valid_xs)
+    
+    train_auroc = clf.auroc(y, train_preds)
+    print(f'Train_AUROC: {train_auroc}')
+    
+    valid_auroc = clf.auroc(valid_y, valid_preds)
+    print(f'Valid_AUROC: {valid_auroc}')
+
     clf.save('models/GNB_model.pkl')
     
     
