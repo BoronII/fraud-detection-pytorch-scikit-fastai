@@ -9,19 +9,23 @@ class RFClassifier(SKClassifier):
       
     def __init__(self, model, df, cat, cont, dep_var, procs):
         super().__init__(model, df, cat, cont, dep_var, procs) 
-      
+    
+    # Calculate feature importance
+    # Sort features by importance
     def feature_importances(self, df,  thresh, to_drop=None):
         fi = pd.DataFrame({'cols': df.columns,'imp': self.model.feature_importances_}) \
                           .sort_values('imp', ascending=False)
-          
+        # Keep only features with importance exceeding the threshold
         to_keep           = fi[fi.imp>thresh].cols
         self.xs_imp       = self.xs[to_keep]
         self.valid_xs_imp = self.valid_xs[to_keep]
         
+        # Optionaly, drop a list of features
         if to_drop != None: 
             self.xs_imp       = self.xs_imp.drop(to_drop, axis=1)
             self.valid_xs_imp = self.valid_xs_imp.drop(to_drop, axis=1)
-          
+        
+        # Print the number of features 
         print(f'n_features: {len(to_keep)}')
         return self.xs_imp, self.valid_xs_imp
 
@@ -75,12 +79,16 @@ if __name__=='__main__':
     
     clf.fit(xs, y)
     
+    # This feature was found to be redundant with the TransactionDT feature
     to_drop = ['TransactionID']    
 
+    # Get training and validation dataframes with important features
+    # The threshold was determined experimentally (see notebooks/02...)
     xs_imp, valid_xs_imp = clf.feature_importances(xs, thresh=0.003, to_drop=to_drop)
 
     ros = RandomOverSampler(random_state=42)
     
+    # Apply over sampling to training dataframes
     xs_imp, y = ros.fit_resample(xs_imp, y)
    
     assert y.sum()==len(y)/2
