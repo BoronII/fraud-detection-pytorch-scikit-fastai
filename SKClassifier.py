@@ -40,7 +40,7 @@ class SKClassifier:
            
         
     def fit(self, xs, y):
-        # Train Gaussian Naive Bayes' classifier
+        # Train classifier
         self.model.fit(xs, y)
     
     def predict_proba(self, xs):
