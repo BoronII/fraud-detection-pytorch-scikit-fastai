@@ -8,7 +8,7 @@ from pathlib              import Path
      
 if __name__=='__main__':
 
-    PATH = Path('/data')
+    PATH = Path('data')
     
     TRAIN = pd.read_csv('data/train_s.csv', index_col=[0], low_memory=False)
     
