@@ -16,10 +16,16 @@ features engineered by Vesta. The dataset is thoroughly explored in 01_EDA.ipynb
 
 ## Modelling approaches
 
-- Baseline
-- RF
-- HistgradientBoostingClassifier
-- Neural net
+# Baseline
+As a baseline model, a gaussian naive bayes' classifier was trained.
+
+![GaussianNB_aucs.jpg](https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/GaussianNB_aucs.jpg)
+
+# RF
+
+# HistgradientBoostingClassifier
+
+# Neural net
 
 ## Results
 
