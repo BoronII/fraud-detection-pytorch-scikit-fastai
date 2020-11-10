@@ -20,24 +20,28 @@ features engineered by Vesta. The dataset is thoroughly explored in 01_EDA.ipynb
 As a baseline model, a gaussian naive bayes' classifier was trained.
 
 This model achieved an roc score of 0.71.
+
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/GaussianNB_aucs.jpg" width="500" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/GaussianNB_cm.jpg" width="300" height="250" />
 
 # RF
 With tabular data it is always a good idea to try some tree based models.
 
 This model achieved an roc score of 0.88.
+
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/Important_Features_RF_aucs.jpg" width="500" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/Important_Features_RF_cm.jpg" width="300" height="250" />
 
 # HistGradientBoostingClassifier
 HistGradientBoostingClassifier is an implementation (by the sklearn team) of microsoft's LightGBM. 
 
 This model achieved an roc score of 0.88.
+
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/Imp_GBT_aucs.jpg" width="500" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/Imp_GBT_vm.jpg" width="300" height="250" />
 
 # Neural net
 When there are categorical variables with large cardinality (many levels). Neural networks sometimes out perform tree based models. 
 
 This model achieved an roc score of 0.81.
+
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/classweighted_nn_metrics.png" width="1000" height="250" /> 
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/classweighted_nn_cm.png" width="300" height="250" />
 
