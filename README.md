@@ -19,8 +19,7 @@ features engineered by Vesta. The dataset is thoroughly explored in 01_EDA.ipynb
 # Baseline
 As a baseline model, a gaussian naive bayes' classifier was trained.
 
-<img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/GaussianNB_aucs.jpg" width="600" height="300" />
-<img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/GaussianNB_cm.jpg" width="400" height="300" />
+<img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/GaussianNB_aucs.jpg" width="600" height="300" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/GaussianNB_cm.jpg" width="400" height="300" />
 
 # RF
 
