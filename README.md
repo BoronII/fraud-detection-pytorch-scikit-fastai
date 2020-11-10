@@ -29,7 +29,7 @@ With tabular data it is always a good idea to try some tree based models.
 # HistGradientBoostingClassifier
 HistGradientBoostingClassifier is an implementation (by the sklearn team) of microsoft's LightGBM. 
 
-<img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/Imp_GBT_aucs.jpg" width="500" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/Imp_GBT_vm.jpg" width="300" height="250" />
+<img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/Imp_GBT_aucs.jpg" width="800" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/Imp_GBT_vm.jpg" width="300" height="250" />
 
 # Neural net
 When there are categorical variables with large cardinality (many levels). Neural networks sometimes out perform tree based models. 
