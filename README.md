@@ -34,7 +34,7 @@ HistGradientBoostingClassifier is an implementation (by the sklearn team) of mic
 # Neural net
 When there are categorical variables with large cardinality (many levels). Neural networks sometimes out perform tree based models. 
 
-<img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/classweighted_nn_metrics" width="500" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/classweighted_nn_cm" width="300" height="250" />
+<img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/classweighted_nn_metrics.png" width="500" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/classweighted_nn_cm.png" width="300" height="250" />
 ## Results
 
 AUROC vs PERCISION RECALL
