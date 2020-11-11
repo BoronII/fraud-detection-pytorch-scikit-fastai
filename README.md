@@ -29,7 +29,8 @@ The training scripts are contained in the main directory.
 # Baseline
 As a baseline model, a gaussian naive bayes' classifier was trained.
 
-This model achieved an roc score of 0.71.
+This model achieved an roc score of 0.71. 
+The precision and recall were both under 12%.
 
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/GaussianNB_aucs.jpg" width="500" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/GaussianNB_cm.jpg" width="300" height="250" />
 
