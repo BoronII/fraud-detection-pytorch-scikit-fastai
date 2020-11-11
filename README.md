@@ -46,19 +46,13 @@ The percision was nearly 40% and the recall was approximately 46%.
 
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/Important_Features_RF_aucs.jpg" width="500" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/Important_Features_RF_cm.jpg" width="300" height="250" />
 
-Random forests with class weighting performed approximately as well as the model 
-that was finally chosen (which did not have class weighting). These models had much lower percision
-(~12%) together with a moderately higher recall (~64%)
-
-<img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/Final_DT_cm.jpg" width="300" height="250" />
-
 Random over sampling...
 
-<img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/ROS_Imp_RF_cm.jpg" width="300" height="250" />
+<img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/ROS_Imp_RF_auc.jpg" width="400" height="200" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/ROS_Imp_RF_cm.jpg" width="300" height="250" />
 
 While random under sampling...
 
-<img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/RUS_Imp_RF_cm.jpg" width="300" height="250" />
+<img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/RUS_Imp_RF_auc.jpg" width="400" height="200" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/RUS_Imp_RF_cm.jpg" width="300" height="250" />
 
 
 # HistGradientBoostingClassifier
