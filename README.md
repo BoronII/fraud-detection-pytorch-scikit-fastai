@@ -14,6 +14,9 @@ The [dataset](https://www.kaggle.com/c/ieee-fraud-detection/discussion/101203) i
 anonymized and has a mix of categorical and continuous features, include 339 
 features engineered by Vesta. The dataset is thoroughly explored in 01_EDA.ipynb.  
 
+- class imbalance
+- train test split
+
 ## Modelling approaches
 
 # Baseline
@@ -40,8 +43,12 @@ This model achieved an roc score of 0.88.
 # Neural net
 When there are categorical variables with large cardinality (many levels). Neural networks sometimes out perform tree based models. 
 
-This model achieved an roc score of 0.81.
+This model achieved an roc score of 0.82.
 
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/classweighted_nn_metrics.png" width="1000" height="250" /> 
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/classweighted_nn_cm.png" width="300" height="250" />
+
+# Conclusions
+
+
 
