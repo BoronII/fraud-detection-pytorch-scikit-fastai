@@ -12,7 +12,8 @@ area under the ROC curve between the predicted probability and the observed targ
 
 The [dataset](https://www.kaggle.com/c/ieee-fraud-detection/discussion/101203) is 
 anonymized and has a mix of categorical and continuous features, include 339 
-features engineered by Vesta. The dataset is thoroughly explored in 01_EDA.ipynb.  
+features engineered by Vesta. The dataset is thoroughly explored in 01_EDA.ipynb. 
+Two notable features of the data 
 
 - class imbalance
 - train test split
@@ -41,7 +42,8 @@ This model achieved an roc score of 0.88.
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/Imp_GBT_aucs.jpg" width="500" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/Imp_GBT_vm.jpg" width="300" height="250" />
 
 # Neural net
-When there are categorical variables with large cardinality (many levels). Neural networks sometimes out perform tree based models. 
+When there are categorical variables with large cardinality (many levels). 
+Neural networks sometimes out perform tree based models. 
 
 This model achieved an roc score of 0.82.
 
