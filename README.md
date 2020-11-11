@@ -64,6 +64,15 @@ This model achieved an roc score of 0.88.
 
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/Imp_GBT_aucs.jpg" width="500" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/Imp_GBT_vm.jpg" width="300" height="250" />
 
+Random over sampling...
+
+<img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/ROS_Imp_GBT_aucs.jpg" width="500" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/ROS_Imp_GBT_cm.jpg" width="300" height="250" />
+
+Random under sampling...
+
+<img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/RUS_Imp_GBT_aucs.jpg" width="500" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/RUS_Imp_GBT_cm.jpg" width="300" height="250" />
+
+
 # Neural net
 When there are categorical variables with large cardinality (many levels). 
 Neural networks sometimes out perform tree based models. 
