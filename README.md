@@ -22,6 +22,10 @@ off of the most recent 20% of the training data for validation.
 
 ## Modelling approaches
 
+Details regarding each of the modelling approaches can be found in the notebooks. 
+Where applicable, hyperparameters were tuned and the best model was selected.
+The training scripts are contained in the main directory.
+
 # Baseline
 As a baseline model, a gaussian naive bayes' classifier was trained.
 
