@@ -23,7 +23,7 @@ off of the most recent 20% of the training data for validation.
 ## Modelling approaches
 
 Details regarding each of the modelling approaches can be found in the notebooks. 
-Where applicable, hyperparameters were tuned and the best model was selected.
+Where applicable, hyperparameters were tuned and the best model with respect to roc score was selected.
 The training scripts are contained in the main directory.
 
 # Baseline
@@ -42,8 +42,16 @@ analysis using the random forest model was used to reduce the number of features
 under consideration, while maintaining the roc score. 
 
 This model achieved an roc score of 0.88.
+The percision was nearly 40% and the recall was approximately 46%.
 
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/Important_Features_RF_aucs.jpg" width="500" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/Important_Features_RF_cm.jpg" width="300" height="250" />
+
+Random forests with class weighting performed approximately as well as the model 
+that was finally chosen (which did not have class weighting). These models had much lower percision
+(~12%) together with a moderately higher recall (~64%)
+
+<img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/Final_DT_cm.jpg" width="300" height="250" />
+
 
 # HistGradientBoostingClassifier
 HistGradientBoostingClassifier is an implementation (by the sklearn team) of microsoft's LightGBM. 
