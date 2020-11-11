@@ -15,9 +15,7 @@ anonymized and has a mix of categorical and continuous features, include 339
 features engineered by Vesta. The dataset is thoroughly explored in 01_EDA.ipynb. 
 Two notable features of the data 
 
-<img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/ClassDistribution.png" width="400" height="200" />
-
-<img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/TransactionDT.png" width="400" height="200" />
+<img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/ClassDistribution.png" width="400" height="200" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/TransactionDT.png" width="400" height="200" />
 
 ## Modelling approaches
 
