@@ -13,7 +13,8 @@ area under the ROC curve between the predicted probability and the observed targ
 The [dataset](https://www.kaggle.com/c/ieee-fraud-detection/discussion/101203) is 
 anonymized and has a mix of categorical and continuous features, include 339 
 features engineered by Vesta. The dataset is thoroughly explored in 01_EDA.ipynb. 
-Two notable features of the data 
+Two notable features of the dataset are the class imbalance (approximately 30:1) 
+and, the distribution of transaction time deltas. 
 
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/ClassDistribution.png" width="400" height="200" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/TransactionDT.png" width="400" height="200" />
 
