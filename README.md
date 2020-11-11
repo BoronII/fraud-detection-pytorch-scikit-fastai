@@ -52,6 +52,14 @@ that was finally chosen (which did not have class weighting). These models had m
 
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/Final_DT_cm.jpg" width="300" height="250" />
 
+Random over sampling...
+
+<img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/ROS_Imp_RF_cm.jpg" width="300" height="250" />
+
+While random under sampling...
+
+<img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/RUS_Imp_RF_cm.jpg" width="300" height="250" />
+
 
 # HistGradientBoostingClassifier
 HistGradientBoostingClassifier is an implementation (by the sklearn team) of microsoft's LightGBM. 
