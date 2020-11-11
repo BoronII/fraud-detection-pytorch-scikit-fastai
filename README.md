@@ -1,5 +1,5 @@
 # IEEE-CIS Fraud Detection
-kaggle fraud detection
+Kaggle fraud detection
 
 ## Introduction 
 
@@ -30,7 +30,11 @@ This model achieved an roc score of 0.71.
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/GaussianNB_aucs.jpg" width="500" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/GaussianNB_cm.jpg" width="300" height="250" />
 
 # RF
-With tabular data it is always a good idea to try some tree based models.
+With tabular data it is always a good idea to try some tree based models. 
+Another advantage of random forests is that there are a number of packages
+for sklearn that aid in their interperetation. For instance, feature importance
+analysis using the random forest model was used to reduce the number of features
+under consideration, while maintaining the roc score. 
 
 This model achieved an roc score of 0.88.
 
@@ -53,6 +57,8 @@ This model achieved an roc score of 0.82.
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/classweighted_nn_cm.png" width="300" height="250" />
 
 # Conclusions
+
+
 
 
 
