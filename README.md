@@ -14,7 +14,9 @@ The [dataset](https://www.kaggle.com/c/ieee-fraud-detection/discussion/101203) i
 anonymized and has a mix of categorical and continuous features, include 339 
 features engineered by Vesta. The dataset is thoroughly explored in 01_EDA.ipynb. 
 Two notable features of the dataset are the class imbalance (approximately 30:1) 
-and, the distribution of transaction time deltas. 
+and, the distribution of transaction time deltas. All of the transactions from the 
+test set are in the future with respect to the training set. This prompted splitting 
+off of the most recent 20% of the training data for validation. 
 
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/ClassDistribution.png" width="400" height="200" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/TransactionDT.png" width="400" height="200" />
 
