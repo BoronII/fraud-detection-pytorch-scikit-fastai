@@ -48,7 +48,7 @@ Neural networks sometimes out perform tree based models.
 
 This model achieved an roc score of 0.82.
 
-<img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/classweighted_nn_metrics.png" width="1000" height="250" /> 
+<img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/classweighted_nn_metrics.png" width="900" height="200" /> 
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/classweighted_nn_cm.png" width="300" height="250" />
 
 # Conclusions
