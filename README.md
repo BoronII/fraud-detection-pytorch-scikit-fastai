@@ -54,7 +54,7 @@ Random over-sampling led to a model with 32% precision and 45% recall.
 
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/ROS_Imp_RF_auc.jpg" width="500" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/ROS_Imp_RF_cm.jpg" width="300" height="250" />
 
-While random under sampling led to a model with 13% percision and 75% recall.
+While random under-sampling led to a model with 13% percision and 75% recall.
 
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/RUS_Imp_RF_aucs.jpg" width="500" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/RUS_Imp_RF_cm.jpg" width="300" height="250" />
 
@@ -66,11 +66,11 @@ This model achieved an roc score of 0.88.
 
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/Imp_GBT_aucs.jpg" width="500" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/Imp_GBT_vm.jpg" width="300" height="250" />
 
-Random over sampling led to a model with an roc score of 0.87 , 47% percision and, 40% recall.
+Random over-sampling led to a model with an roc score of 0.87 , 47% percision and, 40% recall.
 
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/ROS_Imp_GBT_aucs.jpg" width="500" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/ROS_Imp_GBT_cm.jpg" width="300" height="250" />
 
-Random under sampling led to a model with roc score of 0.86, 10% percision and, 77% recall.
+Random under-sampling led to a model with roc score of 0.86, 10% percision and, 77% recall.
 
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/RUS_Imp_GBT_aucs.jpg" width="500" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/RUS_Imp_GBT_cm.jpg" width="300" height="250" />
 
