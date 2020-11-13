@@ -86,7 +86,7 @@ This model achieved an roc score of 0.82.
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/NN_cm.jpg" width="300" height="250" />
 
 
-<img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/NNs.jpg" width="300" height="250" />
+<img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/NNs.jpg" width="300" height="250" />
 
 
 
