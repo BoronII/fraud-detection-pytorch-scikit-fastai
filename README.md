@@ -93,7 +93,8 @@ The figure below displays the confusion matrix and auroc for the neural net in t
 
 # Conclusions
 
-
+- type of model
+- type of imbalance correction
 
 
 
