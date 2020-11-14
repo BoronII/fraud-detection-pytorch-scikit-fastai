@@ -50,11 +50,11 @@ The percision was nearly 40% and the recall was approximately 46%.
 
 Random over-sampling and random under-sampling resulted in models with approximately the 
 same roc score as the model that was finally chosen (which does not attempt to correct the class imbalance).
-Random over-sampling led to a model with 32% precision and 45% recall.
+**Random over-sampling** led to a model with 32% precision and 45% recall.
 
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/ROS_Imp_RF_auc.jpg" width="500" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/ROS_Imp_RF_cm.jpg" width="300" height="250" />
 
-While random under-sampling led to a model with 13% percision and 75% recall.
+While **random under-sampling** led to a model with 13% percision and 75% recall.
 
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/RUS_Imp_RF_aucs.jpg" width="500" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/RUS_Imp_RF_cm.jpg" width="300" height="250" />
 
@@ -66,11 +66,11 @@ This model achieved an roc score of 0.88.
 
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/Imp_GBT_aucs.jpg" width="500" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/Imp_GBT_vm.jpg" width="300" height="250" />
 
-Random over-sampling led to a model with an roc score of 0.87 , 47% percision and, 40% recall.
+**Random over-sampling** led to a model with an roc score of 0.87 , 47% percision and, 40% recall.
 
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/ROS_Imp_GBT_aucs.jpg" width="500" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/ROS_Imp_GBT_cm.jpg" width="300" height="250" />
 
-Random under-sampling led to a model with roc score of 0.86, 10% percision and, 77% recall.
+**Random under-sampling** led to a model with roc score of 0.86, 10% percision and, 77% recall.
 
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/RUS_Imp_GBT_aucs.jpg" width="500" height="250" /> <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/RUS_Imp_GBT_cm.jpg" width="300" height="250" />
 
@@ -85,6 +85,7 @@ This model achieved an roc score of 0.82.
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/classweighted_nn_metrics.png" width="800" height="200" /> 
 <img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/NN_cm.jpg" width="300" height="250" />
 
+The figure below displays the confusion matrix and auroc for the neural net in the 4 imbalance correction conditions.
 
 <div style="text-align:center"><img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/NNs.jpg" width="600" height="500" /></div>
 
