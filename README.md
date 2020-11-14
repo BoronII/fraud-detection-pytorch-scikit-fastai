@@ -87,6 +87,8 @@ This model achieved an roc score of 0.82.
 
 The figure below displays the confusion matrix and auroc for the neural net in the 4 imbalance correction conditions.
 
+When compared to no imbalance correction, all 3 imbalance correction methods come with an increase in recall at the cost of percision.
+
 <div style="text-align:center"><img src="https://github.com/BoronII/fraud-detection-pytorch-scikit-fastai/blob/master/figures/NNs.jpg" width="600" height="500" /></div>
 
 
