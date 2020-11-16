@@ -95,13 +95,13 @@ When compared to no imbalance correction, all 3 imbalance correction methods com
 
 # Conclusions
 
-The two best performing models with repect to roc score turned out to be the random forest and the Gradient boosted trees model, 
-which each achieved an roc score of approximately 0.88. The random forest model was indepensible because of the insights that it
-provided about the dataset. The gradient boosted trees model is was created using an sklearn implementation (HistGradientBoostingClassifier) of microsofts LightGBM. LightGBM uses a couple of approximations that make it compuationally very efficient when applied to large datasets with many features.
+The two best performing models with respect to roc score turned out to be the random forest and the Gradient boosted trees model, 
+which each achieved a roc score of approximately 0.88. The random forest model was indispensable because of the insights that it
+provided about the dataset. The gradient boosted trees model was created using a sklearn implementation (HistGradientBoostingClassifier) of Microsofts LightGBM. LightGBM uses a couple of approximations that make it computationally very efficient when applied to large datasets with many features.
 In that setting, the HistGradientBoostingClassifier may be a good choice.
 
-The imbalance correction methods investigated here (over/under sampling and class weighting) did not have much impact on the roc scores of the models. 
-
+The imbalance correction methods investigated here (over/under-sampling and class weighting) did not have a great impact on the roc scores of the models. 
+The main impact of the imbalance correction methods was on the balance between precision and recall.
 
 
 
