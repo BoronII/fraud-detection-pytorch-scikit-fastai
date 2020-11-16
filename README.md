@@ -101,7 +101,7 @@ provided about the dataset. The gradient boosted trees model was created using a
 In that setting, the HistGradientBoostingClassifier may be a good choice.
 
 The imbalance correction methods investigated here (over/under-sampling and class weighting) did not have a great impact on the roc scores of the models. 
-The main impact of the imbalance correction methods was on the balance between precision and recall.
+The main impact of the imbalance correction methods was on the balance between precision and recall. 
 
 
 
