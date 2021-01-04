@@ -1,6 +1,6 @@
 import pandas as pd
 
-from SKClassifier           import SKClassifier
+from skclassifier           import SKClassifier
 from fastai.tabular.all     import TabularPandas, Categorify, FillMissing
 from sklearn.ensemble       import RandomForestClassifier
 from imblearn.over_sampling import RandomOverSampler

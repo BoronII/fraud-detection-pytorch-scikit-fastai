@@ -1,6 +1,6 @@
 import pandas as pd
 
-from SKClassifier        import SKClassifier
+from skclassifier        import SKClassifier
 from fastai.tabular.all  import TabularPandas, Categorify, FillMissing
 from sklearn.naive_bayes import GaussianNB
 

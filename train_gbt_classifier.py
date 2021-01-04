@@ -1,6 +1,6 @@
 import pandas as pd
 
-from SKClassifier         import SKClassifier
+from skclassifier         import SKClassifier
 from fastai.tabular.all   import TabularPandas, Categorify, FillMissing
 from sklearn.experimental import enable_hist_gradient_boosting 
 from sklearn.ensemble     import HistGradientBoostingClassifier
